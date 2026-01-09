@@ -63,11 +63,10 @@ def generation(query: str, medication_1: str, medication_2: str, retrieval: str)
             evidence = ""
             if "compatibility" in response and "explanation" and "evidence" in response:
                 if response.get("compatibility") is None:
-                    final_response = response.get('explanation')
                     retrieval = ""        
                 else:
-                    final_response = response.get('explanation')
                     evidence = response.get("evidence")
+                final_response = response.get('explanation')
             else:
                 final_response = "Cette requête n'a pas pu aboutir. Veuillez nous excuser."
                 retrieval = ""
