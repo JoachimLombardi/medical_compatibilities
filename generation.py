@@ -65,12 +65,19 @@ def generation(query: str, medication_1: str, medication_2: str, retrieval: str)
                 compatibility = response.get("compatibility")
                 if compatibility:
                     final_response = f"{medication_1} est compatible avec {medication_2}. \n {response.get('explanation')}" 
+                    evidence = response.get("evidence")
                 elif compatibility is None:
-                    final_response = f"Les documents ne permettent pas de déterminer la compatibilité entre {medication_1} et {medication_2}. \n {response.get('explanation')}"
+                    final_response = f"""Les documents ne permettent pas de déterminer la compatibilité entre {medication_1} et {medication_2}. 
+                                        \n {response.get('explanation')}"""
+                    evidence = ""
+                    retrieval = ""
                 else:
                     final_response = f"{medication_1} n'est pas compatible avec {medication_2}. \n {response.get('explanation')}"
-                evidence = response.get("evidence")
-                print(evidence)
-            return final_response, compatibility, evidence
+                    evidence = response.get("evidence")
+            else:
+                final_response = "Cette requête n'a pas pu aboutir. Veuillez nous excuser."
+                evidence = ""
+                retrieval = ""
+            return final_response, evidence, retrieval
         except Exception as e:
             print(f"Api call failed with error: {e} - attempt {attempt + 1}/{3} - retrying...")

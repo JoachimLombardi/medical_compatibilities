@@ -24,6 +24,5 @@ def rag(query: str, medication_1: str, medication_2: str) -> tuple[str, str]:
         index_qdrant()
     retrieval = search(query)
     retrieval = retrieval.points if getattr(retrieval, "points", None) else retrieval
-    response, compatibility, evidence = generation(query, medication_1, medication_2, retrieval[0].payload["text"])
-    retrieval = retrieval[0].payload["text"] if compatibility is not None else ""
+    response, evidence, retrieval = generation(query, medication_1, medication_2, retrieval[0].payload["text"])
     return response, retrieval, evidence
