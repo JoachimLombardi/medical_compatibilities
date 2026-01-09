@@ -36,13 +36,13 @@ def generation(query: str, medication_1: str, medication_2: str, retrieval: str)
     {
         "compatibility": true | false | null,
         "explanation": string,
-        "evidence": string | null
+        "evidence": string 
     }
     Rules for "evidence":
     - It MUST be an EXACT QUOTE copied verbatim from the Document
     - Do NOT paraphrase
     - Do NOT add any text not present in the Document
-    - If no explicit evidence exists, return null
+    - If no explicit evidence exists, return empty string
     Return ONLY a valid JSON object, no extra text.
     """
     messages = [{"role": "user", "content": prompt}]
