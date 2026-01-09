@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def generation(query: str, medication_1: str, medication_2: str, retrieval: str) -> str:
+def generation(query: str, retrieval: str) -> str:
     """
     Generate a medical compatibility response using the provided document.
     Parameters:

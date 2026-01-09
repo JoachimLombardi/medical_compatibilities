@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def rag(query: str, medication_1: str, medication_2: str) -> tuple[str, str]:
+def rag(query: str) -> tuple[str, str]:
     """
     This function takes a query as input and returns a tuple containing the generated response and the retrieved documents.
     It first checks if the collection "medical_docs" exists in Qdrant. If not, it indexes the collection using the index_qdrant function.
@@ -24,5 +24,5 @@ def rag(query: str, medication_1: str, medication_2: str) -> tuple[str, str]:
         index_qdrant()
     retrieval = search(query)
     retrieval = retrieval.points if getattr(retrieval, "points", None) else retrieval
-    response, evidence, retrieval = generation(query, medication_1, medication_2, retrieval[0].payload["text"])
+    response, evidence, retrieval = generation(query, retrieval[0].payload["text"])
     return response, retrieval, evidence

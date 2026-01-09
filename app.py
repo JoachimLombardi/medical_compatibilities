@@ -9,7 +9,7 @@ if st.button("Generate"):
         st.write("Please enter both medications.")
     else:
         query = medication_1 + " and " + medication_2
-        response, retrieval, evidence = rag(query, medication_1, medication_2)
+        response, retrieval, evidence = rag(query)
         highlighted_evidence = retrieval.replace(evidence, f"<mark style='background-color:#ffe066; padding:2px 4px; border-radius:3px;'>{evidence}</mark>")
         with st.container():
             st.markdown(f"""
