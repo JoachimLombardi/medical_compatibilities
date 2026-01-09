@@ -19,12 +19,13 @@ def generation(query: str, medication_1: str, medication_2: str, retrieval: str)
         "compatibility": true | false | null,
         "explanation": string
     }
-    If the document does not contain enough information, the compatibility should be null.
+    If the document does not contain enough information, the response should be:
+    {"compatibility": null, "explanation": "Not enough information in the document."}
     """
     prompt = """You are a medical expert system.
     You must answer STRICTLY using the provided document.
-    If the document does not contain enough information, answer:
-    {"compatibility": null, "explanation": "Not enough information in the document."}
+    If the document does not contain enough information, compatibility should be null.
+    
     ### Task ###
     Determine whether the two medications or the medication and condition are compatible.
     ### Input ###
