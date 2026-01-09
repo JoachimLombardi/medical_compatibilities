@@ -63,9 +63,8 @@ def generation(query: str, medication_1: str, medication_2: str, retrieval: str)
                 response = {"compatibility": None, "explanation": "Not enough information in the document."}
             evidence = ""
             if "compatibility" in response and "explanation" and "evidence" in response:
-                compatibility = response.get("compatibility")
-                if compatibility is None:
-                    final_response = f"Les documents ne permettent pas de déterminer la compatibilité entre {medication_1} et {medication_2}." 
+                if response.get("compatibility") is None:
+                    final_response = response.get('explanation')
                     retrieval = ""        
                 else:
                     final_response = response.get('explanation')
