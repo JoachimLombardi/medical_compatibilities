@@ -73,7 +73,6 @@ def generation(query: str, medication_1: str, medication_2: str, retrieval: str)
                 else:
                     final_response = f"{medication_1} n'est pas compatible avec {medication_2}. \n {response.get('explanation')}"
                     evidence = response.get("evidence")
-                    evidence = "posologies"
             else:
                 final_response = "Cette requête n'a pas pu aboutir. Veuillez nous excuser."
                 evidence = ""
