@@ -78,6 +78,7 @@ def generation(query: str, medication_1: str, medication_2: str, retrieval: str)
                 final_response = "Cette requête n'a pas pu aboutir. Veuillez nous excuser."
                 evidence = ""
                 retrieval = ""
+            print(final_response)
             return final_response, evidence, retrieval
         except Exception as e:
             print(f"Api call failed with error: {e} - attempt {attempt + 1}/{3} - retrying...")
