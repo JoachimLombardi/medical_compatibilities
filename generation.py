@@ -25,7 +25,6 @@ def generation(query: str, medication_1: str, medication_2: str, retrieval: str)
     prompt = """You are a medical expert system.
     You must answer STRICTLY using the provided document.
     If the document does not contain enough information, compatibility should be null.
-    
     ### Task ###
     Determine whether the two medications or the medication and condition are compatible.
     ### Input ###
@@ -43,7 +42,7 @@ def generation(query: str, medication_1: str, medication_2: str, retrieval: str)
     - Do NOT paraphrase
     - Do NOT add any text not present in the Document
     - If no explicit evidence exists, return empty string
-    Return ONLY a valid JSON object, no extra text.
+    Return ONLY a valid JSON object, no extra text. Answer in French.
     """
     messages = [{"role": "user", "content": prompt}]
     data = {
