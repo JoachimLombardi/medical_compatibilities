@@ -38,7 +38,7 @@ def index_qdrant():
     texts = []
     json_file = Path("data/json/points.json")
     if json_file.exists():
-        with open("data/json/points.json", "r") as f:
+        with open(json_file, "r") as f:
             points = json.load(f)
     else:
         for data in Path("data/text").iterdir():
@@ -63,7 +63,7 @@ def index_qdrant():
             for chunk in chunks
         ]
         points = [{"id": i, "vector": v, "payload": {"text": chunks[i]}} for i, v in enumerate(embeddings)]
-        with open("data/json/points.json", "w") as f:
+        with open(json_file, "w") as f:
             json.dump(points, f)
     qdrant =  QdrantClient(url=os.getenv("QDRANT_URL"), api_key=os.getenv("QDRANT_API_KEY"))
     qdrant.create_collection(collection_name="medical_docs",
