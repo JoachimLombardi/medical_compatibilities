@@ -67,8 +67,7 @@ def generation(query: str, medication_1: str, medication_2: str, retrieval: str)
                     final_response = f"{medication_1} est compatible avec {medication_2}. \n {response.get('explanation')}" 
                     evidence = response.get("evidence")
                 elif compatibility is None:
-                    final_response = f"""Les documents ne permettent pas de déterminer la compatibilité entre {medication_1} et {medication_2}. 
-                                        \n {response.get('explanation')}"""
+                    final_response = f"Les documents ne permettent pas de déterminer la compatibilité entre {medication_1} et {medication_2}." 
                     evidence = ""
                     retrieval = ""
                 else:
