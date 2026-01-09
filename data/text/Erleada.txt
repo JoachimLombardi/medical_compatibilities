@@ -1,0 +1,46 @@
+Erleada
+Contre-indications
+Hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1.
+Femmes enceintes ou susceptibles de l’être (voir rubrique 4.6).
+Convulsions
+Erleada n’est pas recommandé chez les patients ayant des antécédents de convulsions ou d’autres
+facteurs de prédisposition, parmi lesquels, entre autres, une lésion cérébrale sous-jacente, un accident
+vasculaire cérébral récent (moins d’un an), une tumeur cérébrale primitive ou des métastases
+cérébrales. Le traitement doit être arrêté définitivement chez les patients qui présentent des
+convulsions pendant le traitement par Erleada. Le risque de convulsion peut être accru en cas
+d’utilisation concomitante de médicaments abaissant le seuil épileptogène.
+Au cours de deux études randomisées (SPARTAN et TITAN), des convulsions se sont produites chez
+0,6 % des patients recevant apalutamide et chez 0,2 % des patients traités par placebo. Dans ces
+études, les patients ayant des antécédents de convulsions ou ayant des facteurs prédisposants aux
+convulsions ont été exclus.
+Il n’y a pas d’expérience clinique concernant la ré-administration d’Erleada chez des patients ayant
+présenté des convulsions.
+4Utilisation concomitante d’autres médicaments
+L’apalutamide est un inducteur enzymatique puissant et peut entraîner une diminution de l’efficacité
+de nombreux médicaments couramment utilisés (voir rubrique 4.5). L’utilisation
+concomitante d’apalutamide et de médicaments qui sont des substrats cibles de nombreuses enzymes
+du métabolisme ou de transporteurs (voir rubrique 4.5) doit généralement être évitée si leur effet
+thérapeutique pour le patient est important, et si leur posologie ne peut pas être facilement ajustable
+sur la base du suivi de l’efficacité ou des concentrations plasmatiques.
+L’administration concomitante d’apalutamide avec la warfarine et les anticoagulants coumariniques
+doit être évitée. Si Erleada est administré en même temps qu’un anticoagulant métabolisé par le
+CYP2C9 (tel que la warfarine ou l’acénocoumarol), une surveillance additionnelle du taux normalisé
+international (INR) doit être conduite (voir rubrique 4.5).
+Erleada ne doit pas être ré-instauré chez les patients qui ont présenté un syndrome DRESS ou un
+syndrome de Stevens-Johnson (SSJ)/une nécrolyse épidermique toxique (NET) lors d’un traitement
+par Erleada et une alternative de traitement doit être envisagée.
+4.6
+Fertilité, grossesse et allaitement
+Contraception chez les hommes et femmes
+Grossesse
+Erleada est contre-indiqué chez les femmes enceintes ou susceptibles de l’être (voir rubrique 4.3).
+D’après une étude sur la reproduction chez l’animal et son mécanisme d’action, Erleada peut nuire au
+fœtus et conduire à l’arrêt de la grossesse lorsqu’il est administré chez la femme enceinte. Il n’existe
+pas de donnée disponible sur l’utilisation d’Erleada pendant la grossesse.
+Allaitement
+On ne sait pas si l’apalutamide ou ses métabolites sont excrétés dans le lait maternel. On ne peut
+exclure un risque pour l’enfant allaité. Erleada ne doit pas être utilisé pendant l’allaitement.
+Fertilité
+D’après les études réalisées chez l’animal, Erleada peut diminuer la fertilité chez les mâles aptes à la
+reproduction (voir rubrique 5.3).
+
