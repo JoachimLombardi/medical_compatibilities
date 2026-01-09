@@ -18,21 +18,18 @@ def normalize_text(text: str) -> str:
     text = re.sub(r'\s+', ' ', text)
     # 3. Restore newlines
     text = re.sub(r'\n{2,}', '\n\n', text)
-
     return text.strip()
 
 
 def index_qdrant():
     """
     Index Qdrant with embeddings from medical texts.
-
     This function indexes a Qdrant collection with embeddings from medical texts.
     It first checks if a file called "json/points.json" exists. If it does, it loads the
     points from that file. Otherwise, it reads all the text files from "data/text", and
     chunks them into chunks of size 1000 with an overlap of 100. It then uses the
     OpenAI API to compute the embeddings of the chunks, and creates a Qdrant collection
     with the embeddings. Finally, it upserts the points into the collection.
-
     """
     encoding = tiktoken.encoding_for_model("gpt-4.1")
     texts = []
