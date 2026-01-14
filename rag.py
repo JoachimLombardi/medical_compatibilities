@@ -22,7 +22,8 @@ def rag(query: str) -> tuple[str, str]:
     qdrant = QdrantClient(url=os.getenv("QDRANT_URL"), api_key=os.getenv("QDRANT_API_KEY"))
     if not qdrant.collection_exists("medical_docs"):
         index_qdrant()
-    retrieval = search(query)
-    retrieval = retrieval.points if getattr(retrieval, "points", None) else retrieval
-    response, evidence, retrieval = generation(query, retrieval[0].payload["text"])
+    retrievals = search(query)
+    adverse_effects = "\n".join(retrieval["id"] + "\n" + retrieval.payload["text"] for retrieval in retrievals if retrieval["adverse_effects"])
+    contraindication = "\n".join(retrieval["id"] + "\n" + retrieval.payload["text"] for retrieval in retrievals if retrieval["contraindication"])
+    response, evidence, retrieval = generation(query, adverse_effects, contraindication)
     return response, retrieval, evidence

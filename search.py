@@ -1,6 +1,6 @@
 import os
 from openai import OpenAI
-from qdrant_client import QdrantClient
+from qdrant_client import QdrantClient, models
 from dotenv import load_dotenv
 from qdrant_client.models import QueryResponse
 
@@ -10,7 +10,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 qdrant = QdrantClient(url=os.getenv("QDRANT_URL"), api_key=os.getenv("QDRANT_API_KEY"))
 
 
-def search(query: str, k: int=1) -> QueryResponse:
+def search(query: str, k: int=5) -> QueryResponse:
     """
     Search the medical documents collection using the given query.
     The query is embedded into a vector using the OpenAI text-embedding-3-large model.
@@ -23,5 +23,17 @@ def search(query: str, k: int=1) -> QueryResponse:
     Returns:
         QueryResponse: The results of the query.
     """
+    filter =  models.Filter(should=[models.FieldCondition(key="contraindication",
+                                                          match=models.MatchValue(value=True)
+                                                         ),
+                                    models.FieldCondition(key="adverse_effects",
+                                                          match=models.MatchValue(value=True))                    
+                                   ]
+                           )
     query_vector = client.embeddings.create(input=query, model="text-embedding-3-large").data[0].embedding
-    return qdrant.query_points(collection_name="medical_docs", query=query_vector, limit=k, with_payload=True)
+    return qdrant.query_points(collection_name="medical_docs", 
+                               query=query_vector, 
+                               limit=k, 
+                               with_payload=True,
+                               query_filter=filter
+                              ).points
