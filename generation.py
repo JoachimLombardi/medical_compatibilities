@@ -6,28 +6,42 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def generation(query: str, adverse_effects: str, contraindication: str) -> str:
+def generation(treatment: str, adverse_effects: str, contraindication: str) -> str:
     """
-    Generate a medical response based on a query and two documents.
-    The two documents contain information about adverse effects and contraindications of medications.
-    The response is a JSON object in French, with the following structure:
+    Generate a medical report based on the given treatment, adverse effects and contraindication documents.
+
+    The function takes in the treatment, adverse effects and contraindication documents as strings.
+    It returns a json object with the following structure:
     {
         "adverse_effects": [{
-            "<medication_name>": {
-            "effects": [string],
-            "evidence": [string]
-            }]
-        },
+            "medication_name",
+            "evidence": string
+        }],
         "compatibility_mentioned": true | false,
-        "compatibility_explainaition": string,
+        "compatibility_explaination": string,
         "replacement_medication": string | "",
-        "evidence_compatibility": string
+        "evidence_compatibility": [{
+                "medication_name": string,
+                "evidence": string
+            }
+        ] | "",
     }
+
+    The function uses the OpenAI API to generate the report based on the given documents.
+    If the API call fails, the function will retry up to 3 times before returning an error message.
+
+    Parameters:
+    treatment (str): The treatment document as a string.
+    adverse_effects (str): The adverse effects document as a string.
+    contraindication (str): The contraindication document as a string.
+
+    Returns:
+    tuple[str, dict[str, str], dict[str, str]]: A tuple containing the generated report as a string, the adverse effects as a dictionary and the evidence for compatibility as a dictionary.
     """
     prompt = """You are a medical expert system.
     You MUST answer STRICTLY and ONLY using the provided documents.
     You are NOT allowed to use external knowledge.
-    If information is missing, you MUST return an empty string or list.
+    If information is missing, you MUST return an empty string.
     ### TASK ###
     Given a medical Treatment containing one or more medications:
     1. For EACH medication, list ALL adverse effects explicitly mentioned in the Adverse Effects document.
@@ -46,24 +60,32 @@ def generation(query: str, adverse_effects: str, contraindication: str) -> str:
     - If no explicit evidence exists, return an empty string "".
     - If compatibility cannot be determined, return false.
     ### Treatment ###
-    {{TREATMENT}}
+    """+treatment+"""
     ### Adverse Effects Document ###
-    {{ADVERSE_EFFECTS}}
+    Each document has the following format:
+    [TITLE]: <medication name>
+    [CONTENT]: <document text>
+    """+adverse_effects+"""
     ### Contraindication Document ###
-    {{CONTRAINDICATION}}
+    Each document has the following format:
+    [TITLE]: <medication name>
+    [CONTENT]: <document text>
+    """+contraindication+"""
     ### OUTPUT FORMAT ###
     Return ONLY a valid JSON object in French, with the following structure:
     {
-    "adverse_effects": [{
-        "<medication_name>": {
-        "effects": [string],
-        "evidence": string
-        }]
-    },
-    "compatibility_mentioned": true | false,
-    "compatibility_explainaition": string,
-    "replacement_medication": string | "",
-    "evidence_compatibility": string
+        "adverse_effects": [{
+            "medication_name",
+            "evidence": string
+        }],
+        "compatibility_mentioned": true | false,
+        "compatibility_explainaition": string,
+        "replacement_medication": string | "",
+        "evidence_compatibility": [{
+                "medication_name": string,
+                "evidence": string
+            }
+        ] | "",
     }
     """
     messages = [{"role": "user", "content": prompt}]
@@ -82,7 +104,7 @@ def generation(query: str, adverse_effects: str, contraindication: str) -> str:
                 response = json.loads(response)
             except json.JSONDecodeError:
                 response = {"compatibility_mentioned": False, "explanation": "Not enough information in the document."}
-            evidence = ""
+            final_response = ""
             if ("adverse_effects" in response and "compatibility_mentioned" in response and "compatibility_explanation" in response 
                 and "replacement_medication" in response and "evidence_compatibility" in response):
                 adverse_effects = response.get("adverse_effects")
@@ -90,18 +112,15 @@ def generation(query: str, adverse_effects: str, contraindication: str) -> str:
                 replacement_medication = response.get("replacement_medication", "")
                 evidence_compatibility = response.get("evidence_compatibility")
                 for medication in adverse_effects:
-                    for effect in medication.get("effects"):
-                        evidence += medication.get("evidence")
-                        evidence += "\n"
-                evidence += compatibility_explanation
-                evidence += "\n"
-                evidence += evidence_compatibility
-                evidence += "\n"
-                evidence += "Remplacement : " + replacement_medication
-                final_response = response.get('explanation')
+                        medication_name = medication.get("medication_name")
+                        effects = medication.get("evidence")
+                        final_response += "Effets indésirables de " + medication_name + " : " + effects
+                        final_response += "\n"
+                final_response += compatibility_explanation
+                final_response += "\n"
+                final_response += "Remplacement : " + replacement_medication
             else:
                 final_response = "Cette requête n'a pas pu aboutir. Veuillez nous excuser."
-                retrieval = ""
-            return final_response, evidence, retrieval
+            return final_response, adverse_effects, evidence_compatibility
         except Exception as e:
             print(f"Api call failed with error: {e} - attempt {attempt + 1}/{3} - retrying...")

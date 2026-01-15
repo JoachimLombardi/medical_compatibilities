@@ -23,7 +23,7 @@ def normalize_text(text: str) -> str:
 
 def contains_any(text, keywords):
     text = text.lower()
-    return any(k.lower() in text for k in keywords)
+    return any(k in text for k in keywords)
 
 
 def index_qdrant():
@@ -37,49 +37,45 @@ def index_qdrant():
     with the embeddings. Finally, it upserts the points into the collection.
     """
     encoding = tiktoken.encoding_for_model("gpt-4.1")
-    texts = []
-    texts_ids = []
-    json_file = Path("data/json/points.json")
-    if json_file.exists():
-        with open(json_file, "r") as f:
+    points = Path("data/json/points.json")
+    if points.exists():
+        with open(points, "r") as f:
             points = json.load(f)
     else:
-        for data in Path("data/text").iterdir():
-            if data.is_file():
-                texts.append(data.read_text())
-                texts_ids.append(data.stem)
-        payloads = []
-        chunk_size = 1000     
-        overlap_size = 100     
-        for text, id in zip(texts, texts_ids):
-            text = normalize_text(text)
+        notices = []
+        points = []
+        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        for file in Path("data/text").iterdir():
+            if not file.is_file():
+                continue
+            text = normalize_text(file.read_text())
+            medication_name = file.stem
+            notices.append({"medication_name": medication_name, "text": text})
             tokens = encoding.encode(text)
             start = 0
             while start < len(tokens):
-                end = min(start + chunk_size, len(tokens))
-                chunk_tokens = tokens[start:end]
-                chunk_text = encoding.decode(chunk_tokens)
+                end = min(start + 1000, len(tokens))
+                chunk_text = encoding.decode(tokens[start:end])
+                # remove text after last dot
+                last_dot = chunk_text.rfind(".")
+                if last_dot != -1:
+                    chunk_text = chunk_text[:last_dot+1]
                 payload = {
-                    "id": id,
-                    "text": chunk_text
+                    "medication_name": medication_name,
+                    "text": chunk_text,
+                    "contraindication": contains_any(chunk_text, ["contre-indication", "allergie", "intolérance", "hypersensibilité", "incompatibilité"]),
+                    "adverse_effects": contains_any(chunk_text, ["effets indésirables", "effets secondaires", "risques"])
                 }
-                payloads.append(payload)
-                start += chunk_size - overlap_size
-        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        embeddings = [
-            client.embeddings.create(input=payload["text"], model="text-embedding-3-large").data[0].embedding
-            for payload in payloads
-        ]
-        points = []
-        for i, payload in enumerate(payloads):
-            payload["contraindication"] = contains_any(payload["text"], ["contre-indication", "allergie", "intolérance", "hypersensibilité", "incompatibilité"])
-            payload["adverse_effects"] = contains_any(payload["text"],["effets indésirables", "effets secondaires", "risques"])
-            points.append({
-                "id": i,
-                "vector": embeddings[i],
-                "payload": payload
-            })
-        with open(json_file, "w") as f:
+                embedding = client.embeddings.create(input=chunk_text, model="text-embedding-3-large").data[0].embedding
+                points.append({
+                    "id": len(points),
+                    "vector": embedding,
+                    "payload": payload
+                })
+                start += 900
+        with open("data/json/notices.json", "w") as f:
+            json.dump(notices, f)
+        with open(points, "w") as f:
             json.dump(points, f)
     qdrant =  QdrantClient(url=os.getenv("QDRANT_URL"), api_key=os.getenv("QDRANT_API_KEY"))
     qdrant.create_collection(collection_name="medical_docs",
