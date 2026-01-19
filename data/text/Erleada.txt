@@ -1,46 +1,485 @@
-Erleada
-Contre-indications
-Hypersensibilité à la substance active ou à l’un des excipients mentionnés à la rubrique 6.1.
-Femmes enceintes ou susceptibles de l’être (voir rubrique 4.6).
-Convulsions
-Erleada n’est pas recommandé chez les patients ayant des antécédents de convulsions ou d’autres
-facteurs de prédisposition, parmi lesquels, entre autres, une lésion cérébrale sous-jacente, un accident
-vasculaire cérébral récent (moins d’un an), une tumeur cérébrale primitive ou des métastases
-cérébrales. Le traitement doit être arrêté définitivement chez les patients qui présentent des
-convulsions pendant le traitement par Erleada. Le risque de convulsion peut être accru en cas
-d’utilisation concomitante de médicaments abaissant le seuil épileptogène.
-Au cours de deux études randomisées (SPARTAN et TITAN), des convulsions se sont produites chez
-0,6 % des patients recevant apalutamide et chez 0,2 % des patients traités par placebo. Dans ces
-études, les patients ayant des antécédents de convulsions ou ayant des facteurs prédisposants aux
-convulsions ont été exclus.
-Il n’y a pas d’expérience clinique concernant la ré-administration d’Erleada chez des patients ayant
-présenté des convulsions.
-4Utilisation concomitante d’autres médicaments
-L’apalutamide est un inducteur enzymatique puissant et peut entraîner une diminution de l’efficacité
-de nombreux médicaments couramment utilisés (voir rubrique 4.5). L’utilisation
-concomitante d’apalutamide et de médicaments qui sont des substrats cibles de nombreuses enzymes
-du métabolisme ou de transporteurs (voir rubrique 4.5) doit généralement être évitée si leur effet
-thérapeutique pour le patient est important, et si leur posologie ne peut pas être facilement ajustable
-sur la base du suivi de l’efficacité ou des concentrations plasmatiques.
-L’administration concomitante d’apalutamide avec la warfarine et les anticoagulants coumariniques
-doit être évitée. Si Erleada est administré en même temps qu’un anticoagulant métabolisé par le
-CYP2C9 (tel que la warfarine ou l’acénocoumarol), une surveillance additionnelle du taux normalisé
-international (INR) doit être conduite (voir rubrique 4.5).
-Erleada ne doit pas être ré-instauré chez les patients qui ont présenté un syndrome DRESS ou un
-syndrome de Stevens-Johnson (SSJ)/une nécrolyse épidermique toxique (NET) lors d’un traitement
-par Erleada et une alternative de traitement doit être envisagée.
-4.6
-Fertilité, grossesse et allaitement
-Contraception chez les hommes et femmes
-Grossesse
-Erleada est contre-indiqué chez les femmes enceintes ou susceptibles de l’être (voir rubrique 4.3).
-D’après une étude sur la reproduction chez l’animal et son mécanisme d’action, Erleada peut nuire au
-fœtus et conduire à l’arrêt de la grossesse lorsqu’il est administré chez la femme enceinte. Il n’existe
-pas de donnée disponible sur l’utilisation d’Erleada pendant la grossesse.
-Allaitement
-On ne sait pas si l’apalutamide ou ses métabolites sont excrétés dans le lait maternel. On ne peut
-exclure un risque pour l’enfant allaité. Erleada ne doit pas être utilisé pendant l’allaitement.
-Fertilité
-D’après les études réalisées chez l’animal, Erleada peut diminuer la fertilité chez les mâles aptes à la
-reproduction (voir rubrique 5.3).
+Notice : Informations de l’utilisateur
+Erleada 240 mg comprimés pelliculés
+Apalutamide
+Veuillez lire attentivement cette notice avant de prendre ce médicament, car elle contient
+des
+informations importantes pour vous.
+• Gardez cette notice. Vous pourriez avoir besoin de la relire.
+• Si vous avez d’autres questions, interrogez votre médecin ou votre pharmacien.
+• Ce médicament vous a été personnellement prescrit. Ne le donnez pas à d’autres
+personnes. Il
+pourrait leur être nocif, même si les signes de leur maladie sont identiques aux vôtres.
+• Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre
+pharmacien. Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans
+cette
+notice. Voir rubrique 4.
+Que contient cette notice ?
+1. 2. 4. 6. Qu’est-ce qu’Erleada et dans quel cas est-il utilisé
+Quelles sont les informations à connaître avant de prendre Erleada
+3. Comment prendre Erleada
+Quels sont les effets indésirables éventuels
+5. Comment conserver Erleada
+Contenu de l’emballage et autres informations
+1. Qu’est-ce qu’Erleada et dans quel cas est-il utilisé
+Qu’est-ce qu’Erleada
+Erleada est un médicament anticancéreux qui contient une substance active appelée «
+apalutamide ».
+Dans quel cas Erleada est-il utilisé
+Il est utilisé pour soigner les hommes adultes atteints d’un cancer de la prostate qui :
+• a métastasé vers d’autres parties du corps et répond encore aux traitements médicaux ou
+chirurgicaux qui abaissent le taux de testostérone (également appelé cancer de la prostate
+hormonosensible).
+• n’a pas métastasé vers d’autres parties du corps, et ne répond plus à un traitement
+médical ou
+chirurgical qui abaisse le taux de testostérone (également appelé cancer de la prostate
+résistant à
+la castration).
+Comment fonctionne Erleada
+Erleada agit en bloquant l’activité d’hormones appelées androgènes (telles que la
+testostérone). Les
+androgènes peuvent favoriser la croissance du cancer. En bloquant les androgènes,
+l’apalutamide
+empêche les cellules cancéreuses de la prostate de croître et de se diviser.
 
+2. Quelles sont les informations à connaître avant de prendre Erleada
+Ne prenez jamais Erleada
+• si vous êtes allergique à l’apalutamide ou à l’un des autres composants contenus dans ce
+médicament (mentionnés dans la rubrique 6).
+• si vous êtes une femme enceinte ou susceptible de l’être (voir la rubrique Grossesse et
+contraception, ci-dessous pour plus d’informations).
+Ne prenez pas ce médicament si vous présentez l’une des situations évoquées ci-dessus. En
+cas de
+doute, adressez-vous à votre médecin ou à votre pharmacien avant de prendre ce
+médicament.
+10Avertissements et précautions
+Adressez-vous à votre médecin ou pharmacien avant de prendre ce médicament :
+• si vous avez déjà eu des crises convulsives ou des crises épileptiques dans le passé.
+• si vous prenez des médicaments destinés à empêcher la formation de caillots sanguins
+(tels que
+la warfarine, l’acénocoumarol).
+• si vous avez une affection cardiaque ou vasculaire, notamment des troubles du rythme
+cardiaque
+(arythmies).
+• si vous avez déjà eu une éruption cutanée étendue, une température corporelle élevée et
+des
+ganglions lymphatiques gonflés (réaction médicamenteuse avec éosinophilie et symptômes
+systémiques ou syndrome DRESS) ou une éruption cutanée sévère ou une desquamation de
+la
+peau, des cloques et/ou des ulcères de la bouche (syndrome de Stevens Johnson/nécrolyse
+épidermique toxique ou SJS/TEN) après avoir pris Erleada ou d’autres médicaments
+apparentés.
+Si l&#39;une des situations ci-dessus s&#39;applique à vous (ou si vous n&#39;êtes pas sûr), parlez-en à
+votre médecin
+ou à votre pharmacien avant de prendre ce médicament.
+Chutes et fractures
+Des cas de chutes ont été observés chez des patients prenant Erleada. Veillez
+particulièrement à éviter
+tout risque de chute. Des fractures osseuses ont été observées chez des patients prenant ce
+médicament.
+Maladie cardiaque, accident vasculaire cérébral ou mini accident vasculaire cérébral
+Une obstruction des artères du cœur ou dans une partie du cerveau pouvant conduire au
+décès est
+survenue chez certains patients au cours d’un traitement par Erleada.
+Vous serez suivi par votre professionnel de santé à la recherche de signes ou symptômes de
+troubles
+cardiaques ou cérébraux au cours de votre traitement par ce médicament.
+Contactez votre professionnel de santé ou rendez-vous immédiatement au service
+d’urgences le plus
+proche si vous présentez :
+• une douleur dans la poitrine ou un inconfort au repos ou lors d’activités, ou
+• un essoufflement, ou
+
+• une faiblesse/paralysie musculaire dans n’importe quelle partie du corps, ou
+• des difficultés à parler.
+Si vous prenez des médicaments, parlez-en à votre médecin ou votre pharmacien afin de
+vérifier qu’ils
+ne sont pas associés à un risque accru de convulsions, de saignement ou de trouble
+cardiaque.
+Effets Indésirables Cutanés Sévères (SCAR)
+Des effets indésirables cutanés sévères (SCAR), notamment une réaction médicamenteuse
+avec
+éosinophilie et symptômes systémiques (syndrome DRESS) ou un syndrome de Stevens-
+Johnson/nécrolyse épidermique toxique (SJS/TEN), ont été rapportés lors de l&#39;utilisation
+d&#39;Erleada. Le
+syndrome DRESS peut se manifester par une éruption cutanée généralisée, une température
+corporelle
+élevée et un gonflement des ganglions lymphatiques. Le syndrome de Stevens-Johnson (SSJ)
+ou la
+nécrolyse épidermique toxique (NET) peuvent apparaître initialement sous forme de tâches
+rougeâtres,
+circulaires ou en forme de « cocarde », souvent avec des cloques au centre, au niveau du
+tronc. Des
+ulcères de la bouche, de la gorge, du nez, des parties génitales et des yeux (yeux rouges et
+gonflés)
+peuvent également apparaître. Ces éruptions cutanées graves sont souvent précédées de
+fièvre et/ou de
+symptômes ressemblant à la grippe. Ces éruptions cutanées peuvent évoluer vers une
+desquamation
+généralisée de la peau et des complications peuvent engager le pronostic vital ou être
+d’issue fatale.
+Si vous développez une éruption cutanée grave ou un autre de ces symptômes, arrêtez de
+prendre ce
+médicament et contactez votre médecin ou consultez-le immédiatement.
+Si vous êtes dans l’un des cas ci-dessus (ou en cas de doute), adressez-vous à votre médecin
+ou votre
+pharmacien avant de prendre ce médicament. Voir rubrique « Effets indésirables graves » au
+début de
+la rubrique 4 pour plus d’information.
+11Pneumopathie interstitielle diffuse
+Des cas de pneumopathie interstitielle diffuse (inflammation non infectieuse à l&#39;intérieur des
+poumons
+pouvant entraîner des lésions permanentes) ont été observés chez des patients prenant
+Erleada, y
+compris des cas d’issue fatale. Les symptômes de la pneumopathie interstitielle diffuse sont
+la toux et
+l&#39;essoufflement, parfois accompagnés de fièvre, qui ne sont pas causés par l&#39;activité
+physique.
+
+Consultez immédiatement un médecin si vous présentez des symptômes pouvant être des
+signes de
+pneumopathie interstitielle diffuse.
+Enfants et adolescents
+Ce médicament ne doit pas être utilisé chez les enfants et les adolescents âgés de moins de
+18 ans.
+Si ce médicament est accidentellement ingéré par un enfant ou un adolescent :
+• rendez vous à l’hôpital immédiatement
+• emportez cette notice avec vous pour la montrer au médecin des urgences.
+Autres médicaments et Erleada
+Informez votre médecin ou pharmacien si vous prenez, avez récemment pris ou pourriez
+prendre tout
+autre médicament. En effet, Erleada peut modifier le mode d’action de certains autres
+médicaments.
+De même, certains autres médicaments peuvent modifier le mode d’action d’Erleada.
+En particulier, veuillez informer votre médecin si vous prenez des médicaments :
+• qui abaissent le taux de graisse dans le sang (tel que le gemfibrozil)
+• qui traitent les infections bactériennes (tels que la moxifloxacine, la clarithromycine)
+• qui traitent les infections fongiques (tels que l’itraconazole, le kétoconazole)
+• qui traitent l’infection au VIH (tels que le ritonavir, l’éfavirenz, le darunavir)
+• qui traitent l’anxiété (tels que le midazolam, le diazépam)
+• qui traitent l’épilepsie (tels que la phénytoïne, l’acide valproïque)
+• qui traitent le reflux gastro-œsophagien (affection caractérisée par un excès d’acide dans
+l’estomac) (tel que l’oméprazole)
+• qui empêchent la formation de caillots sanguins (tels que la warfarine, le clopidogrel, le
+dabigatran étexilate)
+• qui traitent le rhume des foins et les allergies (tel que la féxofénadine)
+• qui abaissent le taux de cholestérol (tels que les statines, comme la rosuvastatine, la
+simvastatine)
+• qui traitent les troubles cardiaques ou qui abaissent la tension artérielle (tels que la
+digoxine, la
+félodipine)
+• qui traitent les troubles du rythme cardiaque (tels que la quinidine, le disopyramide,
+l’amiodarone, le sotalol, le dofétilide, l’ibutilide)
+• qui traitent les troubles de la thyroïde (tel que la lévothyroxine)
+• qui traitent la goutte (tel que la colchicine)
+• qui abaissent la glycémie (tel que le répaglinide)
+• qui traitent le cancer (tels que le lapatinib, le méthotrexate)
+• qui traitent la dépendance aux opioïdes ou qui soulagent la douleur (tel que la méthadone)
+• qui traitent les maladies mentales graves (tel que l’halopéridol)
+Vous devez dresser une liste avec le nom des médicaments que vous prenez et la montrer à
+votre
+médecin ou à votre pharmacien lorsque vous commencez un nouveau traitement. Informez
+votre
+
+médecin que vous prenez Erleada s’il souhaite vous prescrire un nouveau médicament. Il est
+possible
+que la dose d’Erleada ou des autres médicaments que vous prenez doive être modifiée.
+Informations sur la grossesse et la contraception pour les hommes et les femmes
+Informations pour les femmes
+• Erleada ne doit pas être pris par les femmes enceintes, susceptibles de tomber enceinte ou
+qui
+allaitent. Ce médicament peut être nocif pour l’enfant à naître.
+12Informations pour les hommes : suivez ces conseils pendant le traitement et pendant les
+3 mois
+qui suivent l’arrêt du traitement
+• Si vous avez des rapports sexuels avec une femme enceinte : utilisez un préservatif afin de
+protéger l’enfant à naître.
+• Si vous avez des rapports sexuels avec une femme susceptible de tomber enceinte : utilisez
+un
+préservatif et une autre méthode de contraception hautement efficace.
+Utilisez un moyen de contraception pendant le traitement et pendant 3 mois après la fin du
+traitement.
+Si vous avez des questions sur la contraception, adressez-vous à votre médecin.
+Ce médicament peut réduire la fertilité chez l’homme.
+Conduite de véhicules et utilisation de machines
+Erleada ne devrait pas avoir d’effet sur votre capacité à conduire des véhicules ou à utiliser
+des outils
+ou des machines.
+Les convulsions sont un des effets indésirables de ce médicament. Si vous avez un risque
+accru de
+convulsions (voir rubrique 2 « Avertissements et précautions »), parlez-en à votre médecin.
+Erleada contient du sodium
+Ce médicament contient moins de 1 mmol (23 mg) de sodium par dose de 240 mg (1
+comprimé),
+c’est-à-dire qu’il est essentiellement « sans sodium ».
+3. Comment prendre Erleada
+Veillez à toujours prendre ce médicament en suivant exactement les indications de votre
+médecin.
+Vérifiez auprès de votre médecin ou pharmacien en cas de doute.
+Votre médecin peut également vous prescrire d&#39;autres médicaments pendant votre
+traitement par
+Erleada.
+Quelle quantité prendre
+La dose recommandée de ce médicament est de 240 mg (un comprimé) une fois par jour.
+
+Prise d’Erleada
+• Prenez ce médicament par voie orale.
+• Ce médicament peut être pris avec ou sans nourriture.
+• Avalez le comprimé en entier pour être sûr de prendre la totalité de la dose. Ne pas
+écraser ou
+couper le comprimé.
+Si vous ne pouvez pas avaler le comprimé entier
+• Si vous ne pouvez pas avaler ce médicament entier, vous pouvez :
+o Le mélanger à l&#39;une des boissons non gazeuses ou à l&#39;un des aliments de consistance
+molle suivants : jus d&#39;orange, thé vert, compote de pommes, yaourt à boire ou
+volume d’eau supplémentaire, comme suit :
+ Placer le comprimé entier dans une tasse. Ne pas écraser ou couper le comprimé.
+ Ajouter environ 10 mL (2 cuillères à café) d&#39;eau non gazeuse afin de s’assurer que
+le comprimé est complètement dans l&#39;eau.
+ Attendre 2 minutes jusqu&#39;à ce que le comprimé soit morcelé et dispersé, puis
+remuer le mélange.
+ Ajouter 30 mL (6 cuillères à café ou 2 cuillères à soupe) d&#39;une des boissons non
+gazeuses ou d&#39;un des aliments de consistance molle suivants : jus d&#39;orange, thé vert,
+compote de pommes, yaourt à boire ou volume d’eau supplémentaire et remuer le
+mélange.
+ Avaler le mélange immédiatement.
+13 Rincer la tasse avec suffisamment d&#39;eau afin de s’assurer que toute la dose a été
+prise et la boire immédiatement.
+ Ne pas conserver le mélange médicament/aliment pour une utilisation ultérieure.
+o Sonde de nutrition nasogastrique : ce médicament peut également être administré à
+l’aide de certaines sondes de nutrition. Demandez à votre professionnel de santé des
+instructions spécifiques sur la manière de prendre correctement le comprimé via une
+sonde de nutrition.
+Si vous avez pris plus d’Erleada que vous n’auriez dû
+Si vous en avez pris plus que vous n’auriez dû, arrêtez de prendre ce médicament et
+contactez votre
+médecin. Il se peut que vous ayez davantage de risque de développer des effets secondaires.
+Si vous oubliez de prendre Erleada
+• Si vous oubliez de prendre ce médicament, prenez votre dose habituelle dès que vous y
+pensez
+le jour même.
+• Si vous oubliez de prendre ce médicament pendant toute une journée, prenez votre dose
+habituelle le jour suivant.
+• Si vous oubliez de prendre ce médicament pendant plus d’une journée, contactez
+immédiatement votre médecin.
+• Ne prenez pas de dose double pour compenser la dose que vous avez oubliée de prendre.
+Si vous arrêtez de prendre Erleada
+N’arrêtez pas de prendre ce médicament sans consulter votre médecin au préalable.
+
+Si vous avez d’autres questions sur l’utilisation de ce médicament, demandez plus
+d’informations à
+votre médecin ou à votre pharmacien.
+4. Quels sont les effets indésirables éventuels
+Comme tous les médicaments, ce médicament peut provoquer des effets indésirables, mais
+ils ne
+ne surviennent pas systématiquement chez tout le monde.
+Effets indésirables graves
+Arrêtez de prendre Erleada et demandez immédiatement un avis médical si vous
+remarquez
+l’un des symptômes suivants :
+• éruption cutanée étendue, température corporelle élevée et ganglions lymphatiques
+gonflés
+(réaction médicamenteuse avec éosinophilie et symptômes systémiques ou syndrome
+DRESS).
+• tâches rougeâtres non surélevées au niveau du tronc, circulaires ou en forme de « cocarde
+»,
+souvent avec des cloques au centre, desquamation de la peau, ulcères de la bouche, de la
+gorge,
+du nez, des organes génitaux et des yeux. Ces éruptions cutanées graves peuvent être
+précédées
+de fièvre et de symptômes ressemblant à la grippe (syndrome de Stevens-Johnson, nécrolyse
+épidermique toxique).
+Informez votre médecin immédiatement si vous remarquez l’un des effets secondaires
+graves
+suivants - votre médecin peut arrêter votre traitement :
+Très fréquent : pouvant affecter plus d&#39;1 personne sur 10
+• chutes ou fractures (os cassés). Votre professionnel de santé peut vous surveiller de plus
+près si
+vous présentez un risque de fractures.
+Fréquent : pouvant affecter jusqu&#39;à 1 personne sur 10
+• maladie cardiaque, accident vasculaire cérébral ou mini accident vasculaire cérébral. Votre
+professionnel de santé vous surveillera pour détecter les signes et les symptômes de
+problèmes
+cardiaques ou cérébraux pendant votre traitement. Appelez votre professionnel de santé ou
+rendez vous immédiatement au service des urgences le plus proche si vous ressentez une
+douleur ou une gêne thoracique au repos ou à l&#39;effort, ou un essoufflement, ou si vous avez
+une
+14faiblesse/paralysie musculaire dans une partie du corps, ou une difficulté à parler pendant
+votre
+traitement par Erleada.
+Peu fréquent : pouvant affecter jusqu&#39;à 1 personne sur 100
+• crises ou convulsions. Votre professionnel de santé arrêtera ce médicament si vous avez
+des
+convulsions pendant le traitement.
+
+• le syndrome des jambes sans repos (besoin impérieux de bouger les jambes pour faire
+cesser des
+sensations douloureuses ou étranges, survenant souvent la nuit).
+Fréquence indéterminée : la fréquence ne peut être estimée sur la base des données
+disponibles
+• toux et essoufflement, éventuellement accompagnés de fièvre, qui ne sont pas provoqués
+par
+l&#39;activité physique (inflammation des poumons, connue sous le nom de pneumopathie
+interstitielle diffuse).
+Informez immédiatement votre professionnel de santé si vous remarquez l’un des effets
+indésirables
+graves ci-dessus.
+Les effets secondaires comprennent
+Informez votre professionnel de santé si vous remarquez l&#39;un des effets secondaires suivants
+:
+Très fréquents (pouvant affecter plus d’1 personne sur 10) :
+• sensation de fatigue intense
+• douleurs articulaires
+• éruption cutanée
+• diminution de l’appétit
+• pression sanguine élevée
+• bouffées de chaleur
+• diarrhée
+• fractures osseuses
+• chutes
+• perte de poids.
+Fréquents (pouvant affecter jusqu’à 1 personne sur 10) :
+• spasmes musculaires
+• démangeaisons
+• perte de cheveux
+• altération de votre goût
+• prélèvements sanguins montrant un taux élevé de cholestérol dans le sang
+• prélèvements sanguins montrant un taux élevé de triglycérides (type de graisse) dans le
+sang
+• maladie cardiaque
+• accident vasculaire cérébral (AVC) ou mini-AVC causé par un faible débit sanguin dans une
+partie du cerveau
+• hypothyroïdie, qui peut entraîner de la fatigue et des difficultés à se lever le matin ; cela se
+détecte par des analyses de sang
+• faible niveau d&#39;un type de globules blancs qui peut vous rendre plus susceptible de
+contracter
+des infections (neutropénie).
+Peu fréquents (pouvant affecter jusqu’à 1 personne sur 100) :
+• convulsions/crises.
+Fréquence indéterminée (la fréquence ne peut être estimée sur la base des données
+disponibles) :
+• tracé cardiaque anormal à l’ECG (électrocardiogramme)
+
+• éruption cutanée étendue, température corporelle élevée et ganglions lymphatiques
+gonflés
+(réaction médicamenteuse avec éosinophilie et symptômes systémiques ou syndrome
+DRESS)
+15• tâches rougeâtres non surélevées au niveau du tronc, circulaires ou en forme de «
+cocarde »,
+souvent avec des cloques au centre, desquamation de la peau, ulcères de la bouche, de la
+gorge,
+du nez, des organes génitaux et des yeux qui peuvent-être précédés de fièvre et de
+symptômes
+ressemblant à la grippe. Ces éruptions cutanées graves peuvent potentiellement engager le
+pronostic vital (syndrome de Stevens-Johnson, nécrolyse épidermique toxique)
+• éruption de la peau ou des muqueuses (éruption lichénoïde)
+• très faible niveau d&#39;un type de globules blancs qui peut vous rendre plus susceptible de
+contracter des infections (agranulocytose).
+Informez votre professionnel de santé si vous remarquez l&#39;un des effets indésirables
+mentionnés ci-
+dessus.
+Déclaration des effets secondaires
+Si vous ressentez un quelconque effet indésirable, parlez-en à votre médecin ou votre
+pharmacien.
+Ceci s’applique aussi à tout effet indésirable qui ne serait pas mentionné dans cette notice.
+Vous
+pouvez également déclarer les effets indésirables directement via :
+Belgique
+Agence fédérale des médicaments et des produits de santé
+www.afmps.be
+Division Vigilance
+Site internet : www.notifieruneffetindesirable.be
+E-mail : adr@fagg-afmps.be
+Luxembourg
+Centre Régional de Pharmacovigilance de Nancy ou Division de la pharmacie et des
+médicaments de
+la Direction de la santé
+Site internet : www.guichet.lu/pharmacovigilance
+En signalant les effets indésirables, vous contribuez à fournir davantage d’informations sur la
+sécurité
+du médicament.
+5. Comment conserver Erleada
+Tenir ce médicament hors de la vue et de la portée des enfants.
+N’utilisez pas ce médicament après la date de péremption indiquée sur l’emballage
+(plaquettes, étui
+intérieur, étui extérieur, flacon et boîte) après « EXP ». La date de péremption fait référence
+au dernier
+jour de ce mois.
+
+À conserver dans l’emballage d’origine à l’abri de l’humidité. Ce médicament ne nécessite
+aucune
+précaution particulière de conservation concernant la température.
+Ne jetez aucun médicament au tout-à-l’égout ou avec les ordures ménagères. Demandez à
+votre
+pharmacien d’éliminer les médicaments que vous n’utilisez plus. Ces mesures contribueront
+à protéger
+l’environnement.
+6. Contenu de l’emballage et autres informations
+Ce que contient Erleada
+• La substance active est l’apalutamide. Chaque comprimé pelliculé contient 240 mg
+d’apalutamide.
+• Les autres composants du comprimé sont : la silice colloïdale anhydre, la croscarmellose
+sodique, le succinate d’acétate d’hypromellose, le stéarate de magnésium et la cellulose
+microcristalline silicifiée. Le pelliculage contient : du monocaprylocaprate de glycérol, de
+l’oxyde de fer noir (E172), du poly (alcool vinylique), du talc, du dioxyde de titane (E171), et
+du copolymère greffé de macrogol et de poly (alcool vinylique) (voir rubrique 2, Erleada
+contient du sodium).
+16Comment se présente Erleada et contenu de l’emballage extérieur
+Les comprimés pelliculés d’Erleada sont de couleur gris bleuté à gris, de forme ovale (21 mm
+de long
+x 10 mm de large), avec l’inscription « E240 » imprimée sur une face.
+Les comprimés peuvent se présenter en flacon ou en étui. Toutes les présentations peuvent
+ne pas être
+commercialisées.
+Flacon
+Les comprimés se présentent dans un flacon en plastique avec fermeture de sécurité pour
+les enfants.
+Chaque flacon contient 30 comprimés et 2 g d’agent dessiccateur au total. Chaque boîte
+contient un
+flacon. À conserver dans l’emballage d’origine. Ne pas avaler ni jeter l’agent dessiccateur.
+Boîte de 28 jours
+pelliculés chacun.
+Chaque boîte de 28 jours contient 28 comprimés pelliculés dans 2 étuis en carton de 14
+comprimés
+Boîte de 30 jours
+pelliculés chacun.
+Chaque boîte de 30 jours contient 30 comprimés pelliculés dans 3 étuis en carton de 10
+comprimés
+Boîte de 84 jours (3 x 28 jours)
+Chaque boîte de 84 jours (3 x 28 jours) contient 84 comprimés pelliculés dans 6 étuis en
+carton de 14
+comprimés pelliculés chacun.
+Titulaire de l’Autorisation de mise sur le marché
+Janssen-Cilag International NV
+
+Turnhoutseweg 30
+B-2340 Beerse
+Belgique
+Fabricant
+Janssen Cilag SpA
+Via C. Janssen
+Borgo San Michele
+Latina 04100, Italie
+Pour toute information complémentaire concernant ce médicament, veuillez prendre
+contact avec le
+représentant local du titulaire de l’autorisation de mise sur le marché :
+België/Belgique/Belgien
+Janssen-Cilag NV
+Tel/Tél: +32 14 64 94 11
+janssen@jacbe.jnj.com
+Luxembourg/Luxemburg
+Janssen-Cilag NV
+Tél/Tel: +32 14 64 94 11
+janssen@jacbe.jnj.com
+Nederland
+Janssen-Cilag B.V.
+Tel: +31 76 711 1111
+janssen@jacnl.jnj.com
+La dernière date à laquelle cette notice a été révisée est novembre 2025.
+17Autres sources d’informations
+Des informations détaillées sur ce médicament sont disponibles sur le site internet de
+l’Agence
+Européenne des Médicaments https://www.ema.europa.eu.
+Pour consulter la notice la plus récente, scannez le QR code qui se trouve ici ou sur la boite.
+Les mêmes
+informations sont également disponibles à l&#39;adresse suivante : https://epi.jnj.
+18

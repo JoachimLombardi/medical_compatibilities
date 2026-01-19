@@ -1,0 +1,11 @@
+Rosuvastatine : Mécanisme d&#39;action
+La rosuvastatine est un inhibiteur sélectif et compétitif de l&#39;HMG Co-A réductase,
+enzyme responsable du contrôle de la transformation de la 3-hydroxy-3-
+méthylglutaryl coenzyme A en mévalonate, précurseur du cholestérol. Le principal
+site d&#39;action de la rosuvastatine est le foie, organe cible pour la baisse
+du cholestérol.
+La rosuvastatine augmente le nombre des récepteurs des LDL (Low-Density
+Lipoprotein) à la surface des hépatocytes, augmentant la captation du
+LDL cholestérol, et renforçant son catabolisme et inhibant la synthèse hépatique
+des VLDL (Very Low-Density Lipoprotein), réduisant ainsi le nombre de particules de
+VLDL et de LDL.

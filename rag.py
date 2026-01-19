@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def rag(query: str) -> tuple[str, str]:
+def rag(query: str) -> tuple[str, str, str]:
     """
     This function takes a query as input and returns a tuple containing the generated response and the retrieved documents.
     It first checks if the collection "medical_docs" exists in Qdrant. If not, it indexes the collection using the index_qdrant function.
@@ -17,7 +17,7 @@ def rag(query: str) -> tuple[str, str]:
     Args:
         query (str): The query to be used for retrieval and generation.
     Returns:
-        tuple[str, str]: A tuple containing the generated response and the retrieved documents.
+        tuple[str, str, str]: A tuple containing the generated response and the retrieved documents.
     """
     qdrant = QdrantClient(url=os.getenv("QDRANT_URL"), api_key=os.getenv("QDRANT_API_KEY"))
     if not qdrant.collection_exists("medical_docs"):

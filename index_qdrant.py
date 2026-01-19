@@ -1,6 +1,8 @@
+import html
 import json
 import os
 from pathlib import Path
+import unicodedata
 import tiktoken
 from openai import OpenAI
 from qdrant_client import QdrantClient
@@ -12,11 +14,15 @@ load_dotenv()
 
 
 def normalize_text(text: str) -> str:
-    # 1. Replace newlines with spaces
+    # 1. Decode HTML entities (&#39; → ')
+    text = html.unescape(text)
+    # 2. Remove page numbers stuck to words (e.g. 14faiblesse)
+    text = re.sub(r'\b\d+(?=[a-zA-Z])', '', text)
+    # 3. Fix broken line breaks (PDF artifacts)
     text = re.sub(r'(?<!\n)\n(?!\n)', ' ', text)
-    # 2. Replace multiple spaces with a single space
-    text = re.sub(r'\s+', ' ', text)
-    # 3. Restore newlines
+    # 4. Normalize whitespace
+    text = re.sub(r'[ \t]+', ' ', text)
+    # 5. Preserve paragraph breaks
     text = re.sub(r'\n{2,}', '\n\n', text)
     return text.strip()
 
@@ -48,10 +54,10 @@ def index_qdrant():
         for file in Path("data/text").iterdir():
             if not file.is_file():
                 continue
-            text = normalize_text(file.read_text())
+            normalized_text = normalize_text(file.read_text())
             medication_name = file.stem
-            notices.append({"medication_name": medication_name, "text": text})
-            tokens = encoding.encode(text)
+            notices.append({"medication_name": medication_name, "text": normalized_text})
+            tokens = encoding.encode(normalized_text)
             start = 0
             while start < len(tokens):
                 end = min(start + 1000, len(tokens))
@@ -63,8 +69,12 @@ def index_qdrant():
                 payload = {
                     "medication_name": medication_name,
                     "text": chunk_text,
-                    "contraindication": contains_any(chunk_text, ["contre-indication", "allergie", "intolérance", "hypersensibilité", "incompatibilité"]),
-                    "adverse_effects": contains_any(chunk_text, ["effets indésirables", "effets secondaires", "risques"])
+                    "contraindication": contains_any(chunk_text, ["contre-indication", "allergie", "autres médicaments", 
+                                                                  "grossesse", "allaitement", "substance active", 
+                                                                  "intolérance", "hypersensibilité", "interference",
+                                                                  "incompatibilité", "interaction", "modiffication du mode d'action",]),
+                    "adverse_effects": contains_any(chunk_text, ["effets indésirables", "effets secondaires", "risque",
+                                                                 "douleur", "grave"])
                 }
                 embedding = client.embeddings.create(input=chunk_text, model="text-embedding-3-large").data[0].embedding
                 points.append({
