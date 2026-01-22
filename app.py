@@ -42,16 +42,16 @@ if st.button("Generate"):
             notices = json.load(f)
         for notice in notices:
             highlighted_evidence = notice["text"]
-            for snippet in evidence_compatibility:
-                    if snippet in highlighted_evidence:
-                        highlighted_evidence = highlighted_evidence.replace(snippet, 
-                                                                        f"""<mark style='background-color:#ffe066; padding:2px 4px; border-radius:3px;'>{snippet}</mark>""")
             for point in points:
                 if point.get("payload").get("adverse_effects"):
                     snippet = point.get("payload").get("text")
                     if snippet in highlighted_evidence:
                         highlighted_evidence = highlighted_evidence.replace(snippet, 
                                                                         f"""<mark style='background-color:#f0fff0; padding:2px 4px; border-radius:3px;'>{snippet}</mark>""")
+            for snippet in evidence_compatibility:
+                    if snippet in highlighted_evidence:
+                        highlighted_evidence = highlighted_evidence.replace(snippet, 
+                                                                        f"""<mark style='background-color:#ffe066; padding:2px 4px; border-radius:3px;'>{snippet}</mark>""")
             with st.container():
                 st.markdown(f"""
                             <div style="
