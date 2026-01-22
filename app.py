@@ -1,17 +1,28 @@
+# docker run -p 6333:6333 qdrant/qdrant
 import json
 from rag import rag
 import streamlit as st
+from ocr import call_llm
 
 
 st.title("Compatibilité de médicaments ou d'un médicament et d'une maladie")
-treatment = st.text_area("Traitement")
+treatments = st.file_uploader(
+    "Traitement",
+    type=["jpg", "jpeg", "png", "pdf"],
+    accept_multiple_files=True)
 if st.button("Generate"):
-    if not treatment:
-        st.write("Veuillez entrer un traitement.")
+    if not treatments:
+        st.write("Veuillez télécharger un traitement")
     else:
-        query = treatment 
-        response, adverse_effects, evidence_compatibility = rag(query)
-        merged = {}
+        # treatment = call_llm(treatments)
+        treatment = """ERLEADA 240 MG CPR (APALUTAMIDE)
+        DECAPEPTYL LP 11,25MG PDR ET SOL INJ (TRIPTORELINE PAMOATE)
+        CRESTOR 20MG CPR (ROSUVASTATINE)
+        RESITUNE 75 MG CPR (ACIDE ACETYLSALICYLIQUE)
+        LOXEN LP 50MG GELULE (NICARDIPINE)"""
+        response, evidence_compatibility = rag(treatment)
+        adverse_effects = {}
+        adverse_effect = ""
         with st.container():
             st.markdown(f"""
                             <div style="
@@ -25,23 +36,22 @@ if st.button("Generate"):
                             {response.replace('\n','<br>')}
                             </div>
                             """, unsafe_allow_html=True)
-        for effect in adverse_effects:
-            medication_name = effect.get("medication_name", "")
-            merged.setdefault(medication_name, set()).add(effect.get("evidence", ""))
-        for evidence in evidence_compatibility:
-            medication_name = evidence.get("medication_name", "")
-            merged.setdefault(medication_name, set()).add(evidence.get("evidence", ""))
+        with open("data/json/points.json", "r") as f:
+            points = json.load(f)
         with open("data/json/notices.json", "r") as f:
             notices = json.load(f)
         for notice in notices:
             highlighted_evidence = notice["text"]
-            for snippet in merged.get(notice["medication_name"], []):
-                if snippet in highlighted_evidence:
-                    highlighted_evidence = highlighted_evidence.replace(snippet, 
-                                                                       f"""<mark style=
-                                                                       'background-color:#ffe066; 
-                                                                       padding:2px 4px; 
-                                                                       border-radius:3px;'>{snippet}</mark>""")
+            for snippet in evidence_compatibility:
+                    if snippet in highlighted_evidence:
+                        highlighted_evidence = highlighted_evidence.replace(snippet, 
+                                                                        f"""<mark style='background-color:#ffe066; padding:2px 4px; border-radius:3px;'>{snippet}</mark>""")
+            for point in points:
+                if point.get("payload").get("adverse_effects"):
+                    snippet = point.get("payload").get("text")
+                    if snippet in highlighted_evidence:
+                        highlighted_evidence = highlighted_evidence.replace(snippet, 
+                                                                        f"""<mark style='background-color:#f0fff0; padding:2px 4px; border-radius:3px;'>{snippet}</mark>""")
             with st.container():
                 st.markdown(f"""
                             <div style="
@@ -52,7 +62,7 @@ if st.button("Generate"):
                                 max-height: 300px;
                                 overflow-y: auto;
                             ">
-                                <strong>📄 Documents sources : {notice["medication_name"]}</strong><br>
+                                <strong>📄 Document source : Notice {notice["medication_name"]}</strong><br>
                                 {highlighted_evidence.replace('\n','<br>')}
                             </div>
                             """, unsafe_allow_html=True)

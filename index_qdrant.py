@@ -43,9 +43,9 @@ def index_qdrant():
     with the embeddings. Finally, it upserts the points into the collection.
     """
     encoding = tiktoken.encoding_for_model("gpt-4.1")
-    points = Path("data/json/points.json")
-    if points.exists():
-        with open(points, "r") as f:
+    points_path = Path("data/json/points.json")
+    if points_path.exists():
+        with open(points_path, "r") as f:
             points = json.load(f)
     else:
         notices = []
@@ -85,7 +85,7 @@ def index_qdrant():
                 start += 900
         with open("data/json/notices.json", "w") as f:
             json.dump(notices, f)
-        with open(points, "w") as f:
+        with open(points_path, "w") as f:
             json.dump(points, f)
     qdrant =  QdrantClient(url=os.getenv("QDRANT_URL"), api_key=os.getenv("QDRANT_API_KEY"))
     qdrant.create_collection(collection_name="medical_docs",

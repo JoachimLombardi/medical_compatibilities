@@ -10,7 +10,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 qdrant = QdrantClient(url=os.getenv("QDRANT_URL"), api_key=os.getenv("QDRANT_API_KEY"))
 
 
-def search(query: str, k: int=5) -> QueryResponse:
+def search(query: str, k: int=3) -> QueryResponse:
     """
     Search the medical documents collection using the given query.
     The query is embedded into a vector using the OpenAI text-embedding-3-large model.
@@ -23,11 +23,9 @@ def search(query: str, k: int=5) -> QueryResponse:
     Returns:
         QueryResponse: The results of the query.
     """
-    filter =  models.Filter(should=[models.FieldCondition(key="contraindication",
+    filter =  models.Filter(must=[models.FieldCondition(key="contraindication",
                                                           match=models.MatchValue(value=True)
-                                                         ),
-                                    models.FieldCondition(key="adverse_effects",
-                                                          match=models.MatchValue(value=True))                    
+                                                         )                  
                                    ]
                            )
     query_vector = client.embeddings.create(input=query, model="text-embedding-3-large").data[0].embedding
