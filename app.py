@@ -3,7 +3,6 @@ import json
 from rag import rag
 import streamlit as st
 from ocr import call_llm
-from index_qdrant import normalize_text
 
 
 st.title("Compatibilité de médicaments ou d'un médicament et d'une maladie")

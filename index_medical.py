@@ -5,8 +5,6 @@ from pathlib import Path
 import unicodedata
 import tiktoken
 from openai import OpenAI
-from qdrant_client import QdrantClient
-from qdrant_client.models import VectorParams, Distance
 from dotenv import load_dotenv
 import re
 
@@ -91,11 +89,11 @@ def index_qdrant():
             json.dump(notices, f)
         with open(points_path, "w") as f:
             json.dump(points, f)
-    qdrant =  QdrantClient(url=os.getenv("QDRANT_URL"), api_key=os.getenv("QDRANT_API_KEY"))
-    qdrant.create_collection(collection_name="medical_docs",
-      vectors_config=VectorParams(size=len(points[0]["vector"]), distance=Distance.COSINE),
-   )
-    qdrant.upsert(collection_name="medical_docs", points=points)
+#     qdrant =  QdrantClient(url=os.getenv("QDRANT_URL"), api_key=os.getenv("QDRANT_API_KEY"))
+#     qdrant.create_collection(collection_name="medical_docs",
+#       vectors_config=VectorParams(size=len(points[0]["vector"]), distance=Distance.COSINE),
+#    )
+#     qdrant.upsert(collection_name="medical_docs", points=points)
 
 
 

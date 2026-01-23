@@ -1,9 +1,5 @@
 import json
-import os
-from search import search
-from index_qdrant import index_qdrant
 from generation import generation
-from qdrant_client import QdrantClient
 from dotenv import load_dotenv
 
 load_dotenv()
