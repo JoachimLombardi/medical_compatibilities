@@ -24,6 +24,10 @@ def normalize_text(text: str) -> str:
     text = re.sub(r'[ \t]+', ' ', text)
     # 5. Preserve paragraph breaks
     text = re.sub(r'\n{2,}', '\n\n', text)
+    # 6. Normalize unicode
+    text = unicodedata.normalize("NFKC", text)
+    # 7. Remove leading and trailing whitespace
+    text = text.replace("\xa0", " ")
     return text.strip()
 
 

@@ -3,24 +3,39 @@ import json
 from rag import rag
 import streamlit as st
 from ocr import call_llm
+from index_qdrant import normalize_text
 
 
 st.title("Compatibilité de médicaments ou d'un médicament et d'une maladie")
+mode = st.radio(
+    "Avez-vous un traitement en cours ?",
+    ["❎ Non", "✍️ Saisie manuelle", "📄 Charger un document"]
+)
+if mode == "✍️ Saisie manuelle":
+    old_treatments = st.text_area("Traitement en cours")
+elif mode == "📄 Charger un document":
+    old_treatments = st.file_uploader("Ancien traitement", 
+                                      type=["jpg", "jpeg", "png", "pdf"],
+                                      accept_multiple_files=True)
+    old_treatments = call_llm(old_treatments)
+else:
+    old_treatments = ""
 treatments = st.file_uploader(
     "Traitement",
     type=["jpg", "jpeg", "png", "pdf"],
     accept_multiple_files=True)
 if st.button("Generate"):
     if not treatments:
-        st.write("Veuillez télécharger un traitement")
+        st.write("Veuillez télécharger votre nouveau traitement")
     else:
-        # treatment = call_llm(treatments)
-        treatment = """ERLEADA 240 MG CPR (APALUTAMIDE)
+        # treatment = old_treatments + "\n" + call_llm(treatments)
+        treatment = old_treatments + "\n" + """ERLEADA 240 MG CPR (APALUTAMIDE)
         DECAPEPTYL LP 11,25MG PDR ET SOL INJ (TRIPTORELINE PAMOATE)
         CRESTOR 20MG CPR (ROSUVASTATINE)
         RESITUNE 75 MG CPR (ACIDE ACETYLSALICYLIQUE)
         LOXEN LP 50MG GELULE (NICARDIPINE)"""
         response, evidence_compatibility = rag(treatment)
+        print(evidence_compatibility)
         adverse_effects = {}
         adverse_effect = ""
         with st.container():
@@ -42,14 +57,15 @@ if st.button("Generate"):
             notices = json.load(f)
         for notice in notices:
             highlighted_evidence = notice["text"]
+            print(repr(highlighted_evidence))
             for point in points:
                 if point.get("payload").get("adverse_effects"):
                     snippet = point.get("payload").get("text")
-                    if snippet in highlighted_evidence:
+                    if snippet and snippet.strip() and snippet in highlighted_evidence:
                         highlighted_evidence = highlighted_evidence.replace(snippet, 
                                                                         f"""<mark style='background-color:#f0fff0; padding:2px 4px; border-radius:3px;'>{snippet}</mark>""")
             for snippet in evidence_compatibility:
-                    if snippet in highlighted_evidence:
+                    if snippet and snippet.strip() and snippet in highlighted_evidence:
                         highlighted_evidence = highlighted_evidence.replace(snippet, 
                                                                         f"""<mark style='background-color:#ffe066; padding:2px 4px; border-radius:3px;'>{snippet}</mark>""")
             with st.container():

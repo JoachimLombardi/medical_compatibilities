@@ -124,6 +124,7 @@ def call_llm(files, tools=tools):
                 break
             except Exception as e:
                 print(f"Attempt {attempt}/3 \n API call failed with error: {e} - retrying...")
+                treatments = ""
     return treatments
 
 

@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def generation(treatment: str, contraindication: str) -> tuple[str, list[str]]:
+def generation(treatment: str, contraindication: str, evidence_compatibility: list, final_response: str) -> tuple[str, list[str]]:
     """
     This function takes a medical treatment and a Notice as input 
     and returns a JSON object in French with information about the compatibility of the medications in the treatment 
@@ -25,7 +25,7 @@ def generation(treatment: str, contraindication: str) -> tuple[str, list[str]]:
     You MUST answer STRICTLY and ONLY using the provided document.
     ### TASK ###
     Given a medical Treatment containing one or more medications:
-    1. Determine whether one the medication in Treatment has an explicit incompatibility or contraindication in the Notice.
+    1. Determine whether one the medication in Treatment has an explicit incompatibility or contraindication in the Notice and if so, specify them.
     2. If medications are NOT compatible:
     - Determine wether there is a replacement medication suggested in the Notice. Otherwise return empty string.
     3. If there is one or more contraindications in the Notice, return a list of evidence from the document.
@@ -65,15 +65,16 @@ def generation(treatment: str, contraindication: str) -> tuple[str, list[str]]:
                 response = json.loads(response)
             except json.JSONDecodeError:
                 response = {}
-            final_response = ""
             compatibility_explanation = response.get("compatibility_explanation") if response.get("compatibility_mentioned") else "Aucune contre-indication n'est mentionnée."
-            replacement_medication = response.get("replacement_medication") if response.get("replacement_medication") else "Aucun médicament de substitution n'est proposé."
-            evidence_compatibility = response.get("evidence_compatibility", [])
+            replacement_medication = response.get("replacement_medication") or "Aucun médicament de substitution n'est proposé."
+            evidence_compatibility.extend(response.get("evidence_compatibility", []) or []) 
             medication_name = contraindication.split("\n")[0]
             final_response += medication_name + "\n" + compatibility_explanation + "\n" + replacement_medication + "\n"
             print(final_response)
-            return final_response, evidence_compatibility
         except Exception as e:
             print(f"Api call failed with error: {e} - attempt {attempt}/{3} - retrying...")
+            final_response = "Une erreur s'est produite lors de la tentative de appel de l'API. Veuillez essayer de nouveau."
+            evidence_compatibility = []
+        return final_response, evidence_compatibility
 
 
