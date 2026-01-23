@@ -60,7 +60,6 @@ def generation(treatment: str, contraindication: str, evidence_compatibility: li
             client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
             response = client.responses.create(**data)
             response = response.output_text
-            print(response)
             try:
                 response = json.loads(response)
             except json.JSONDecodeError:
@@ -70,7 +69,6 @@ def generation(treatment: str, contraindication: str, evidence_compatibility: li
             evidence_compatibility.extend(response.get("evidence_compatibility", []) or []) 
             medication_name = contraindication.split("\n")[0]
             final_response += medication_name + "\n" + compatibility_explanation + "\n" + replacement_medication + "\n"
-            print(final_response)
         except Exception as e:
             print(f"Api call failed with error: {e} - attempt {attempt}/{3} - retrying...")
             final_response = "Une erreur s'est produite lors de la tentative de appel de l'API. Veuillez essayer de nouveau."

@@ -36,6 +36,5 @@ def rag(query: str) -> tuple[str, list[str]]:
         for point in points:
             if point.get("payload").get("medication_name") == medication_name and point.get("payload").get("contraindication"):
                 contraindication += point.get("payload").get("text") + " "
-        print("contraindication", contraindication)
         final_response, evidence_compatibility = generation(query, contraindication, evidence_compatibility, final_response)
     return final_response, evidence_compatibility

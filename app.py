@@ -1,4 +1,3 @@
-# docker run -p 6333:6333 qdrant/qdrant
 import json
 from rag import rag
 import streamlit as st
@@ -27,14 +26,8 @@ if st.button("Generate"):
     if not treatments:
         st.write("Veuillez télécharger votre nouveau traitement")
     else:
-        # treatment = old_treatments + "\n" + call_llm(treatments)
-        treatment = old_treatments + "\n" + """ERLEADA 240 MG CPR (APALUTAMIDE)
-        DECAPEPTYL LP 11,25MG PDR ET SOL INJ (TRIPTORELINE PAMOATE)
-        CRESTOR 20MG CPR (ROSUVASTATINE)
-        RESITUNE 75 MG CPR (ACIDE ACETYLSALICYLIQUE)
-        LOXEN LP 50MG GELULE (NICARDIPINE)"""
-        response, evidence_compatibility = rag(treatment)
-        print(evidence_compatibility)
+        treatments = old_treatments + "\n" + call_llm(treatments)
+        response, evidence_compatibility = rag(treatments)
         adverse_effects = {}
         adverse_effect = ""
         with st.container():
@@ -56,7 +49,6 @@ if st.button("Generate"):
             notices = json.load(f)
         for notice in notices:
             highlighted_evidence = notice["text"]
-            print(repr(highlighted_evidence))
             for point in points:
                 if point.get("payload").get("adverse_effects"):
                     snippet = point.get("payload").get("text")

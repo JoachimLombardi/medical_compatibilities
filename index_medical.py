@@ -13,6 +13,19 @@ load_dotenv()
 
 def normalize_text(text: str) -> str:
     # 1. Decode HTML entities (&#39; → ')
+    """
+    Normalize text by performing the following steps:
+
+    1. Decode HTML entities (&#39; → ')
+    2. Remove page numbers stuck to words (e.g. 14faiblesse)
+    3. Fix broken line breaks (PDF artifacts)
+    4. Normalize whitespace
+    5. Preserve paragraph breaks
+    6. Normalize unicode
+    7. Remove leading and trailing whitespace
+
+    Returns the normalized text as a string.
+    """
     text = html.unescape(text)
     # 2. Remove page numbers stuck to words (e.g. 14faiblesse)
     text = re.sub(r'\b\d+(?=[a-zA-Z])', '', text)
@@ -29,19 +42,29 @@ def normalize_text(text: str) -> str:
     return text.strip()
 
 
-def contains_any(text, keywords):
+def contains_any(text: str, keywords: list[str]) -> bool:
+    """
+    Check if any of the keywords are present in the text.
+
+    Parameters:
+    text (str): The text to search.
+    keywords (list[str]): The list of keywords to search for.
+
+    Returns:
+    bool: True if any of the keywords are present, False otherwise.
+    """
     text = text.lower()
     return any(k in text for k in keywords)
 
 
-def index_qdrant():
+def index_medical():
     """
-    Index Qdrant with embeddings from medical texts.
-    This function indexes a Qdrant collection with embeddings from medical texts.
+    Index medical with embeddings from medical texts.
+    This function indexes a medical collection with embeddings from medical texts.
     It first checks if a file called "json/points.json" exists. If it does, it loads the
     points from that file. Otherwise, it reads all the text files from "data/text", and
     chunks them into chunks of size 1000 with an overlap of 100. It then uses the
-    OpenAI API to compute the embeddings of the chunks, and creates a Qdrant collection
+    OpenAI API to compute the embeddings of the chunks, and creates a medical collection
     with the embeddings. Finally, it upserts the points into the collection.
     """
     encoding = tiktoken.encoding_for_model("gpt-4.1")

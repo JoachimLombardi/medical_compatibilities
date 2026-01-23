@@ -5,6 +5,8 @@ from pathlib import Path
 import tempfile
 import fitz
 from openai import OpenAI
+from typing import Optional
+from streamlit.runtime.uploaded_file_manager import UploadedFile
 
 
 tools = [
@@ -39,7 +41,7 @@ tools = [
 ]
 
 
-def to_b64_image(treatment):
+def to_b64_image(treatment: Optional[UploadedFile]) -> list[str]:
     """
     Convert a treatment to a base64 encoded image.
 
@@ -89,7 +91,7 @@ def to_b64_image(treatment):
     return list_b64
 
 
-def call_llm(files, tools=tools):
+def call_llm(files: Optional[UploadedFile], tools: list=tools) -> str:
     treatments = ""
     for treatment in files:
         list_images = to_b64_image(treatment)
@@ -109,7 +111,6 @@ def call_llm(files, tools=tools):
                 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
                 response = client.responses.create(**data)
                 final_response = response.output[0].to_json()
-                print("final_response", final_response)
                 if isinstance(final_response, dict):
                     treatment_dict = final_response.get("arguments", None)
                     treatment_dict = json.loads(treatment_dict)
