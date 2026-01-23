@@ -13,7 +13,7 @@ mode = st.radio(
 if mode == "✍️ Saisie manuelle":
     old_treatments = st.text_area("Traitement en cours")
 elif mode == "📄 Charger un document":
-    old_treatments = st.file_uploader("Ancien traitement", 
+    old_treatments = st.file_uploader("Traitement en cours", 
                                       type=["jpg", "jpeg", "png", "pdf"],
                                       accept_multiple_files=True)
     old_treatments = call_llm(old_treatments)
