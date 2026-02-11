@@ -54,7 +54,7 @@ précisant les éventuelles incompatibilitées et les éventuels médicaments de
     <img src="https://img.shields.io/badge/GPT-412991?style=for-the-badge&logo=openai&logoColor=white" alt="GPT">
   </a>
   <a href="https://openai.com/" style="text-decoration: none;">
-    <img src="  https://img.shields.io/badge/Streamlit-dark?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
+    <img src="https://img.shields.io/badge/Streamlit-dark?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
   </a>
 </p>
 
