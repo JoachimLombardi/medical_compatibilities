@@ -61,41 +61,7 @@ précisant les éventuelles incompatibilitées et les éventuels médicaments de
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
-## 🤝 Contributions
 
-Les contributions sont ce qui fait de la communauté open source un endroit incroyable pour apprendre, s'inspirer et créer. Toute contribution est **grandement appréciée**.
-
-Si vous avez une suggestion pour améliorer ce projet, n'hésitez pas à **forker le dépôt** et à proposer une pull request. Vous pouvez également ouvrir une issue avec le tag "enhancement".
-
-N'oubliez pas de laisser une étoile ⭐ au projet ! Merci encore ! 🚀
-
-### 🔧 Comment contribuer ?
-
-1. **Forkez le projet**
-2. **Créez une branche pour votre fonctionnalité**  
-   Utilisez la commande suivante pour créer une nouvelle branche pour la fonctionnalité que vous souhaitez ajouter :
-   ```bash
-   git checkout -b fonctionnalité/IncroyableFonctionnalité
-3. **Commitez vos modifications**
-   Après avoir fait les modifications nécessaires, enregistrez-les avec un commit en utilisant la commande :
-    ```bash
-   git commit -m 'Ajout de la fonctionnalité IncroyableFonctionnalité'
-4. **Poussez votre branche sur votre fork**
-    Pour pousser vos changements sur votre fork, utilisez :
-   ```bash
-   git push origin fonctionnalité/IncroyableFonctionnalité
-5. **Ouvrez une Pull Request**
-    Une fois votre branche prête, ouvrez une pull request pour que vos modifications puissent être intégrées au projet principal.
-
-### Top contributors:
-
-<a href="https://github.com/JoachimLombardi/Projet_chef_d-oeuvre/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=JoachimLombardi/Projet_chef_d-oeuvre" alt="contrib.rocks image" />
-</a>
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📄 Licence
 
@@ -116,20 +82,6 @@ Project Link: [https://github.com/JoachimLombardi/Projet_chef_d-oeuvre](https://
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-## 🏅 Badges du projet
-
-![Contributors](https://img.shields.io/github/contributors/JoachimLombardi/Projet_chef_d-oeuvre.svg?style=for-the-badge)
-![Forks](https://img.shields.io/github/forks/JoachimLombardi/Projet_chef_d-oeuvre.svg?style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/JoachimLombardi/Projet_chef_d-oeuvre.svg?style=for-the-badge)
-![Issues](https://img.shields.io/github/issues/JoachimLombardi/Projet_chef_d-oeuvre.svg?style=for-the-badge)
-![License](https://img.shields.io/github/license/JoachimLombardi/Projet_chef_d-oeuvre.svg?style=for-the-badge)
-
-[Contributors](https://github.com/JoachimLombardi/Projet_chef_d-oeuvre/graphs/contributors)  
-[Forks](https://github.com/JoachimLombardi/Projet_chef_d-oeuvre/network/members)  
-[Stars](https://github.com/JoachimLombardi/Projet_chef_d-oeuvre/stargazers)  
-[Issues](https://github.com/JoachimLombardi/Projet_chef_d-oeuvre/issues)  
-[License](https://github.com/JoachimLombardi/Projet_chef_d-oeuvre/blob/master/LICENSE.txt)
 
 
 
