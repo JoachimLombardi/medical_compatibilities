@@ -1,9 +1,7 @@
 # medical_compatibilities
 
-# 🚀 Projet Chef d'Œuvre
 
-
-  <h3>RAG Détection d'incompatibilitées médicamenteuses 📚</h3>
+  <h3>Détection d'incompatibilitées médicamenteuses 📚</h3>
   <p>
     Cette application permet de vérifier si des médicaments prescrits à un patient sont incompatibles entre eux ou bien avec sa maladie.
   </p>
@@ -13,16 +11,8 @@
 
 ## 📑 Table des matières:
 
-1. [Démarrer 🚀](#démarrer)
-   - [Prérequis ⚙️](#prérequis)
-   - [Installation 💻](#installation)
-2. [Usage 🎯](#usage)
-3. [Roadmap 🛤️](#roadmap)
-4. [Built With 🛠️](#built-with)
-5. [Contributions 🤝](#contributions)
-6. [License 📄](#license)
-7. [Contact 📬](#contact)
-8. [Badges du projet 🏅](#badges-du-projet)
+1. [Usage 🎯](#usage)
+2. [Built With 🛠️](#built-with)
 
 ---
 
